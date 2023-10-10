@@ -76,9 +76,8 @@ const HeaderComponent: FC<HeaderProps> = ({ collapsed, toggle }) => {
   return (
     <Header className="layout-page-header bg-2" style={{ backgroundColor: token.token.colorBgContainer }}>
       {device !== 'MOBILE' && (
-        <div className="logo" style={{ width: collapsed ? 80 : 200 }}>
-          <img src={ReactSvg} alt="" style={{ marginRight: collapsed ? '2px' : '20px' }} />
-          <img src={AntdSvg} alt="" />
+        <div className="logo " style={{ width: collapsed ? 80 : 200 }}>
+         GDSC Meet
         </div>
       )}
       <div className="layout-page-header-main">
@@ -103,12 +102,6 @@ const HeaderComponent: FC<HeaderProps> = ({ collapsed, toggle }) => {
               onClick: info => selectLocale(info),
               items: [
                 {
-                  key: 'zh_CN',
-                  icon: <ZhCnSvg />,
-                  disabled: locale === 'zh_CN',
-                  label: '简体中文',
-                },
-                {
                   key: 'en_US',
                   icon: <EnUsSvg />,
                   disabled: locale === 'en_US',
@@ -122,7 +115,7 @@ const HeaderComponent: FC<HeaderProps> = ({ collapsed, toggle }) => {
             </span>
           </Dropdown>
 
-          {logged ? (
+          {/* {logged ? (
             <Dropdown
               menu={{
                 items: [
@@ -155,7 +148,7 @@ const HeaderComponent: FC<HeaderProps> = ({ collapsed, toggle }) => {
             <span style={{ cursor: 'pointer' }} onClick={toLogin}>
               {formatMessage({ id: 'gloabal.tips.login' })}
             </span>
-          )}
+          )} */}
         </div>
       </div>
     </Header>

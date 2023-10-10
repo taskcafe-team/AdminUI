@@ -69,6 +69,8 @@ const LayoutPage: FC = () => {
 
     if (status) {
       setMenuList(result);
+      console.log(result);
+      
       dispatch(
         setUserItem({
           menuList: initMenuListAll(result),
